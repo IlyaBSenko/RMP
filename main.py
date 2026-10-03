@@ -27,7 +27,7 @@ def fast():
         func = ops[symb]
         answer = func(rand1, rand2)
         
-        print(f" {rand1} {symb} {rand2} to get {answer}")
+        print(f"Line {i}: {rand1} {symb} {rand2} to get {answer}")
         
 def slow():
     n = int(input("Please enter a number (prefferably very large) for the computer to generate random math problems on: "))
@@ -39,7 +39,7 @@ def slow():
         func = ops[symb]
         answer = func(rand1, rand2)
         
-        print(f" {rand1} {symb} {rand2} to get {answer}")
+        print(f"Line {i}: {rand1} {symb} {rand2} to get {answer}")
         time.sleep(0.001)
     
 
