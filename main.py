@@ -1,6 +1,6 @@
 import random
-from operator import *
 import time
+from operator import *
 
 ops = {
         "+": add,
@@ -18,10 +18,10 @@ ops = {
 }
 
 def fast():
-    n = int(input("Please enter a number (prefferably very large) for the computer to generate random math problems on: "))
+    n = int(input("Please enter a number for the computer to generate random math problems on: "))
     for i in range(1, n + 1):
-        rand1 = random.randint(1, 10)
-        rand2 = random.randint(1, 20)
+        rand1 = random.randint(5, 10)
+        rand2 = random.randint(10, 20)
         
         symb = random.choice(list(ops.keys()))
         func = ops[symb]
@@ -30,10 +30,10 @@ def fast():
         print(f"Line {i}: {rand1} {symb} {rand2} to get {answer}")
         
 def slow():
-    n = int(input("Please enter a number (prefferably very large) for the computer to generate random math problems on: "))
+    n = int(input("Please enter a number for the computer to generate random math problems on: "))
     for i in range(1, n + 1):
-        rand1 = random.randint(1, 10)
-        rand2 = random.randint(1, 20)
+        rand1 = random.randint(5, 10)
+        rand2 = random.randint(10, 20)
         
         symb = random.choice(list(ops.keys()))
         func = ops[symb]
@@ -44,7 +44,6 @@ def slow():
     
 
 def main():
-    # TODO: add fast / slow mode for whether user wants fast output or slow output (fast = default, slow = time.sleep(1.5) or something)
     speed = input("Would you like fast or slow: ")
     if speed == "fast":
         fast()
