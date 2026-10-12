@@ -81,11 +81,38 @@ def slow():
 
 def main():
     speed = input("Would you like fast or slow: ")
+    if speed == "bogo":
+        bogo_secret()
     if speed == "fast":
         fast()
     elif speed == "slow":
         slow()
 
+# secret function ooo
+# fix the time taken function
+def bogo_secret():
+    arr_size = int(input("Enter the array size: "))
+    new_arr = []
+    for n in range(arr_size):
+        i = random.randint(0, 20)
+        new_arr.append(i)
+
+    start_time = time.perf_counter()
+    while new_arr != sorted(new_arr):
+        random.shuffle(new_arr)
+        print(new_arr)
+
+    end_time = time.perf_counter()
+    time_taken = end_time - start_time
+    if time_taken > 1:
+        new_time = time_taken
+        print(f"It took {new_time:.2f} seconds")
+    elif time_taken > 60:
+        new_time = time_taken / 60
+        print(f"It took {new_time:.2f} minutes")
+    else:
+        print(f"Took {time_taken:.5f} milliseconds")
 
 if __name__ == "__main__":
     main()
+    # bogo_secret()
