@@ -7,3 +7,4 @@
 - Soving {rand_number} {rand_operation} {rand_number} to get {output} 
 - Soving {rand_number} {rand_operation} {rand_number} to get {output} 
 - Soving {rand_number} {rand_operation} {rand_number} to get {output} 
+###### and how much each operation was used
