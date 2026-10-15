@@ -77,6 +77,7 @@ def slow():
     for symb in ops:
         if ops_count[symb] > 0:
             print(f"{symb} was used {ops_count[symb]} amount of times.")
+            print('Slow mode is "slow" because its waiting 1 millisecond in between each print')
     
 
 def main():
