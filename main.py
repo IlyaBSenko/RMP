@@ -107,11 +107,11 @@ def slow():
 def main():
     print("Would you like fast or slow: ")
     speed = input('Slow mode is "slow" because its waiting 1 millisecond in between each print ')
-    if speed == "bogo":
+    if speed == "bogo" or speed == "b":
         bogo_secret()
-    if speed == "fast":
+    if speed == "fast" or speed == "f":
         fast()
-    elif speed == "slow":
+    elif speed == "slow" or speed == "s":
         slow()
 
 def bogo_secret():
