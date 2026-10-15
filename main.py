@@ -89,8 +89,6 @@ def main():
     elif speed == "slow":
         slow()
 
-# secret function ooo
-# fix the time taken function
 def bogo_secret():
     arr_size = int(input("Enter the array size: "))
     new_arr = []
@@ -105,14 +103,14 @@ def bogo_secret():
 
     end_time = time.perf_counter()
     time_taken = end_time - start_time
-    if time_taken > 1:
-        new_time = time_taken
-        print(f"It took {new_time:.2f} seconds")
+    if time_taken > 3600:
+        print(f"It took {time_taken / 3600:.2f} hours") # hopefully it doesnt come to this
     elif time_taken > 60:
-        new_time = time_taken / 60
-        print(f"It took {new_time:.2f} minutes")
+        print(f"It took {time_taken / 60:.2f} minutes")
+    elif time_taken > 1:
+        print(f"It took {time_taken:.2f} seconds")
     else:
-        print(f"Took {time_taken:.5f} milliseconds")
+        print(f"It took {time_taken * 1000:.2f} milliseconds")
 
 if __name__ == "__main__":
     main()
